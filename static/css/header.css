@@ -3,8 +3,7 @@
  */
 
 #header-div{
-    width: 100%;
-    height: 31px;
+    height: 50px;
     background: #4D4848;
     margin-top: -8px;
     color: #ffffff;
@@ -13,25 +12,70 @@
     font-size: 14px;
     right: 0px;
     left: 0px;
+    z-index: 20;
 }
-#header-div #header-donate-button{
-    background: #5FC657;
-    border-radius: 15px;
-    width: 115px;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-}
-#header-div #track-donation{
-    display: inline;
-}
+
 #header-div #sign-in{
     text-decoration: underline;;
 }
-#header-div span{
+#header-div ul li{
     float: right;
-    margin: 5px 12px;
+    padding: 5px;
+    list-style: none;
 }
-#header-div span:hover{
+#header-div ul li:hover{
     cursor: pointer;
 }
+
+/* Css for drop down div */
+#drop-down-header{
+    height: 40px;
+    color: #000000;
+    margin-top: 50px;
+    font-size: 14px;
+    right: 0px;
+    left: 0px;
+    z-index: 1000;
+    list-style: none;
+    padding-left: 0px;
+    position: fixed;
+}
+#drop-down-header ul li{
+    padding: 5px;
+    list-style: none;
+}
+#drop-down-header .header-drop-element{
+    float: right;
+    height: 50%;
+    margin-top: 7px;
+    margin-right: 9px;
+    padding: 6px 14px;
+    text-align: center;
+}
+#drop-down-header .header-drop-element:hover,
+.header-drop-element ul li:hover{
+   cursor: pointer;
+   text-shadow: none;
+   background: green;
+
+}
+/**
+ * Drop down elements css
+ **/
+.header-drop-element ul{
+    display: none;
+}
+.header-drop-element:hover ul  {
+    display: block; /* display the dropdown */
+}
+.drop-down-elements-list li {
+    background: none repeat scroll 0 0 green;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+.drop-down-elements-list li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+

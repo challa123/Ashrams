@@ -1,0 +1,27 @@
+body {
+    background: none repeat scroll 0% 0% #ffe2b1 !important;
+}
+.donations-container{
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    background: #ffffff;
+    overflow-y: auto;
+}
+.donations-container ol{
+
+}
+.donations-container ol li{
+    width: 200px;
+    overflow: hidden;
+    margin: 5px;
+    height: auto;
+    float: left;
+}
+.donations-container ol li img{
+    width: 200px;
+    height: 200px;
+}
+.donations-container ol li div{
+    word-wrap: break-word;
+}
