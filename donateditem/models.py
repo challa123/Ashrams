@@ -22,7 +22,7 @@ class DonatedItem(Base, models.Model):
     delivered_date = models.DateTimeField(null=True, blank=True)
     available_time = models.DateTimeField(null=True, blank=True)
     ashram_id = models.ForeignKey(Ashrams, null=True, blank=True, verbose_name='ashram')
-    username = models.ForeignKey(MyUser, verbose_name='user')
+    username = models.ForeignKey(MyUser, verbose_name='username')
     is_anonymous = models.BooleanField(default=True)
     image_by_user = models.FileField(null=True, blank=True, upload_to='donated/user')
     image_by_ashram = models.FileField(null=True, blank=True, upload_to='donated/ashram')

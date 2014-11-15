@@ -28,7 +28,7 @@ class Ashrams(Base, models.Model):
                                         default=0)
     above_sixty = models.IntegerField(validators=[MinValueValidator(0)], verbose_name="above 60",
                                     default=0)
-    user_id = models.ForeignKey(MyUser, verbose_name='user')
+    username = models.ForeignKey(MyUser, verbose_name='username')
     ashram_rating = models.IntegerField(max_length=2)
     ashram_pic = models.FileField(upload_to='ashrams')
 

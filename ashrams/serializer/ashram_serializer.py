@@ -17,10 +17,9 @@ class AshramSerializer(serializers.ModelSerializer):
     aboveSixty = serializers.IntegerField(source='above_sixty', default=0)
     ashramRating = serializers.IntegerField(source='ashram_rating')
     ashramPic = serializers.FileField(source='ashram_pic', required=False)
-    userId = serializers.IntegerField(source='user_id')
 
     class Meta:
         model = Ashrams
         fields = ('id', 'createdDate', 'modifiedDate', 'name', 'address', 'info', 'phone', 'belowOne', 'oneToFive',
-                  'sixToTen', 'elevenToFourteen', 'userId', 'fifteenToEighteen', 'nineteenToForty', 'fortyToSixty',
+                  'sixToTen', 'elevenToFourteen', 'username', 'fifteenToEighteen', 'nineteenToForty', 'fortyToSixty',
                   'aboveSixty', 'ashramRating', 'ashramPic', 'strength')
