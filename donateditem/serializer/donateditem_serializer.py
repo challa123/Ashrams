@@ -16,5 +16,5 @@ class DonatedItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = DonatedItem
         fields = ('id', 'createdDate', 'modifiedDate', 'name', 'description', 'quantity', 'deliveredDate',
-                  'status', 'availableTime', 'ashramId', 'user', 'imageByUser', 'imageByAshram', 'is_anonymous',
+                  'status', 'availableTime', 'ashramId', 'username', 'imageByUser', 'imageByAshram', 'is_anonymous',
                   'requiredItem')
