@@ -9,7 +9,9 @@ __author__ = 'challa'
 class Ashrams(Base, models.Model):
     name = models.CharField(max_length=255)
     address = models.TextField()
+    info = models.TextField()
     phone = models.IntegerField(max_length=10)
+    strength = models.IntegerField(validators=[MinValueValidator(0)], default=0)
     below_one = models.IntegerField(validators=[MinValueValidator(0)], verbose_name="People with age below 1",
                                     default=0)
     one_to_five = models.IntegerField(validators=[MinValueValidator(0)], verbose_name="age between 1 and 5",
@@ -26,10 +28,13 @@ class Ashrams(Base, models.Model):
                                         default=0)
     above_sixty = models.IntegerField(validators=[MinValueValidator(0)], verbose_name="above 60",
                                     default=0)
-    user = models.ForeignKey(MyUser)
+    user_id = models.ForeignKey(MyUser, verbose_name='user')
     ashram_rating = models.IntegerField(max_length=2)
-    #ashram_pic = models.ImageField()
+    ashram_pic = models.FileField(upload_to='ashrams')
 
     class Meta:
         app_label = 'ashrams'
         verbose_name_plural = 'Ashrams'
+
+    def __unicode__(self):
+        return self.name

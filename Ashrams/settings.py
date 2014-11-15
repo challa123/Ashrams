@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'ashrams',
     'myuser',
+    'donateditem',
+    'requireditem',
+    'anonymoususer',
+    'gallery',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -104,6 +108,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+MEDIA_URL = '/media/'
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),

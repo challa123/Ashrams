@@ -6,7 +6,7 @@ from ashrams.models.base import Base
 
 
 class MyUserManager(BaseUserManager):
-    def create_user(self, username, first_name, last_name, address, phone, password=None, email=None):
+    def create_user(self, username, first_name, last_name, address, phone, profile_pic=None, password=None, email=None):
         """
         Creates and saves a Myuser with the given email, date of
         birth and password.
@@ -18,14 +18,15 @@ class MyUserManager(BaseUserManager):
             first_name=first_name,
             last_name=last_name,
             address=address,
-            phone=phone
+            phone=phone,
+            profile_pic=profile_pic
         )
 
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, username, password, phone, first_name, last_name, email=None):
+    def create_superuser(self, username, password, phone, first_name, last_name, profile_pic=None, email=None):
         """
         Creates and saves a superuser with the given email, date of
         birth and password.
@@ -46,7 +47,8 @@ class MyUserManager(BaseUserManager):
             first_name=first_name,
             last_name=last_name,
             is_admin=True,
-            phone=phone
+            phone=phone,
+            profile_pic=profile_pic
         )
         user.set_password(password)
         user.save(using=self._db)
@@ -65,6 +67,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin, Base):
     last_name = models.CharField(max_length=200, blank=False)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
+    profile_pic = models.FileField(upload_to='users', null=True, blank=True)
 
     objects = MyUserManager()
 
