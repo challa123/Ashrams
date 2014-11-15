@@ -11,11 +11,10 @@ class DonatedItemSerializer(serializers.ModelSerializer):
     imageByAshram = serializers.FileField(source='image_by_ashram', required=False)
     isAnonymous = serializers.BooleanField(source='is_anonymous', default=True)
     requiredItem = serializers.IntegerField(source='required_item', required=False)
-    userId = serializers.IntegerField(source='user_id')
     ashramId = serializers.IntegerField(source='ashram_id', required=False)
 
     class Meta:
         model = DonatedItem
         fields = ('id', 'createdDate', 'modifiedDate', 'name', 'description', 'quantity', 'deliveredDate',
-                  'status', 'availableTime', 'ashramId', 'userId', 'imageByUser', 'imageByAshram', 'is_anonymous',
+                  'status', 'availableTime', 'ashramId', 'user', 'imageByUser', 'imageByAshram', 'is_anonymous',
                   'requiredItem')
