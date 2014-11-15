@@ -2,10 +2,110 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    {% load staticfiles %}
+    <script src="{% static 'js/home.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home1.css' %}">
+    <title>Home</title>
+
 </head>
 <body>
-
+{% include "../templates/header.html" %}
+<div id="home">
+    <div id="home-carousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+    	<!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#home-carousel" data-slide-to="1"></li>
+            <li data-target="#home-carousel" data-slide-to="2"></li>
+            <li data-target="#home-carousel" data-slide-to="3"></li>
+        </ol>
+         <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item">
+                {% load staticfiles %}
+                <img src="{% static 'images/example-slide-1.jpg' %}">
+            </div>
+            <div class="item">
+                {% load staticfiles %}
+                <img src="{% static 'images/example-slide-2.jpg' %}">
+            </div>
+            <div class="item">
+                {% load staticfiles %}
+                <img src="{% static 'images/example-slide-3.jpg' %}">
+            </div>
+            <div class="item">
+                {% load staticfiles %}
+                <img src="{% static 'images/example-slide-4.jpg' %}">
+            </div>
+            </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#home-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"><<</span>
+        </a>
+        <a class="carousel-control right" href="#home-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right">>></span>
+        </a>
+    </div>
+    <h2 id="supporting-count">
+       <div>
+           Supporting
+           <span id="children-count">100</span>
+           children
+       </div>
+       <div>
+           from
+           <span id="ashram-count">20</span>
+           ashrams
+       </div>
+    </h2>
+    <div id="home-recent">
+        <div id="recent-requirements">
+            <h3>Recent Requirements</h3>
+            <ul>
+                {% for item in item_list %}
+                    <li>{{ item.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="what-we-do">
+            <h2>
+                What we do...
+            </h2>
+            <div>
+                Tinnama padukunnama tellarinda
+                edslndlf lksdf lksdjfls lkjsdjfljdslkfj lksdjfjsldf lkjsdjfl lkjdsfl jsdlksdljlsd lksdjfljlsd fjlksd dslkkjfs jlsdf lsdjf sdlkjsdf lksdjf sdlkjfsdhjfower ewrfonls oiwf jweof howjhnsde ewhowe hjfowuwef iuwehjf wehfowenf 8wef fhow fhowefnsd ouifjhwsf fhowf ewio
+            </div>
+        </div>
+    <div id="recent-donations">
+            <h3>Recent Donations</h3>
+            <ul>
+                {% for item in item_list %}
+                    <li>{{ item.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <section id="home-circle-buttons">
+        <div class="circle-button">
+                {% load staticfiles %}
+                <img src="{% static 'images/ashrams.png' %}">
+        </div>
+        <div class="circle-button">
+                {% load staticfiles %}
+                <img src="{% static 'images/item_receiving.png' %}">
+        </div>
+        <div class="circle-button">
+                {% load staticfiles %}
+                <img src="{% static 'images/need.png' %}">
+        </div>
+    </section>
+</div>
 </body>
-{% extends "../templates/header.html" %}
+
+
+{% load staticfiles %}
+<script src="{% static 'js/jquery.slides.min.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.js' %}"></script>
 </html>

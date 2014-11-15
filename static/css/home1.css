@@ -1,0 +1,79 @@
+/**
+ *style for count animation
+**/
+#supporting-count{
+    color: #ffffff;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+    left: 75px;
+    top: 80px;
+    position: absolute;
+}
+.counter-background{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    background: greenyellow;
+}
+#children-count, #ashram-count{
+    background-repeat: repeat-x !important;
+    display: inline-block;
+    font-size: 48px;
+    font-weight: bold;
+    height: 70px;
+    letter-spacing: 70px;
+    line-height: 67px;
+    padding: 0 31px;
+    /*position: relative;*/
+    top: -10px;
+    word-wrap: normal;
+    background: url("../images/circle.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#children-count{
+    width: 280px;
+}
+#ashram-count{
+    width: 184px;
+}
+
+/*  carousel styling */
+#home-carousel .carousel-inner img{
+    height: 500px !important;
+    width: 100%;
+}
+
+/* css for reecent changes div */
+#home-recent >div {
+    float : left;
+    margin: 0px 100px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+}
+#home-recent{
+    display: flex;
+}
+
+#what-we-do{
+    margin: 0px 50px;
+    overflow: visible;
+    text-align: center;
+    width: 500px;
+    word-wrap: break-word;
+}
+/*circular images styles*/
+#home-circle-buttons >div{
+    border-radius: 100%;
+    float: left;
+    background: orange;
+    width: 150px;
+    height: 150px;
+    padding-left: 20px;
+    margin: 20px;
+}
+#home-circle-buttons img{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    margin-top: 20px;
+}
