@@ -4,8 +4,6 @@ from ashrams.models import Ashrams
 from ashrams.serializer.ashram_serializer import AshramSerializer
 
 
-def sample_html(request):
-    return render_to_response('home.html')
 
 class ListAshramView(generics.ListAPIView):
     model = Ashrams

@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from Ashrams import settings
-from ashrams.views import sample_html
+from Ashrams.views import sample_html
 
 admin.autodiscover()
 
