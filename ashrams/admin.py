@@ -8,7 +8,7 @@ class AshramAdmin(admin.ModelAdmin):
                                                                     'eleven_to_fourteen', 'fifteen_to_eighteen',
                                                                     'nineteen_to_forty'), ('forty_to_sixty',
                                                                                            'above_sixty'),
-                           'ashram_rating', 'user_id', 'ashram_pic')}),
+                           'ashram_rating', 'username', 'ashram_pic')}),
     )
-    list_display = ('id', 'name', 'address', 'phone', 'user_id', 'strength')
+    list_display = ('id', 'name', 'address', 'phone', 'username', 'strength')
 admin.site.register(Ashrams, AshramAdmin)
