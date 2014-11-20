@@ -1,0 +1,14 @@
+body {
+    background: none repeat scroll 0% 0% #ffe2b1 !important;
+}
+.data-container{
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    background: #ffffff;
+    overflow-y: auto;
+}
+.data-container >div{
+    margin: 15px;
+}

@@ -5,18 +5,17 @@
 #header-div{
     height: 50px;
     background: #4D4848;
-    margin-top: -8px;
     color: #ffffff;
-    display: inline;
     position: fixed;
     font-size: 14px;
-    right: 0px;
-    left: 0px;
+    width: 100%;
     z-index: 20;
 }
-
-#header-div #sign-in{
-    text-decoration: underline;;
+#header-div >a{
+    display: inline-block;
+    float: right;
+    padding:12px 15px 0 0;
+    color: #ffffff;
 }
 #header-div ul li{
     float: right;
@@ -31,7 +30,7 @@
 #drop-down-header{
     height: 40px;
     color: #000000;
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 14px;
     right: 0px;
     left: 0px;
@@ -39,6 +38,10 @@
     list-style: none;
     padding-left: 0px;
     position: fixed;
+}
+#drop-down-header ul{
+    float: right;
+    margin-right: 400px;
 }
 #drop-down-header ul li{
     padding: 5px;
@@ -52,30 +55,58 @@
     padding: 6px 14px;
     text-align: center;
 }
-#drop-down-header .header-drop-element:hover,
-.header-drop-element ul li:hover{
-   cursor: pointer;
-   text-shadow: none;
-   background: green;
-
-}
 /**
  * Drop down elements css
  **/
-.header-drop-element ul{
-    display: none;
+#drop-down-header .nav-pills .dropdown:hover{
+    background: rgba(255, 216, 197, 0.45);
 }
-.header-drop-element:hover ul  {
-    display: block; /* display the dropdown */
+#drop-down-header .nav-pills .dropdown:hover ul{
+    display: block;/* display the dropdown */
 }
-.drop-down-elements-list li {
-    background: none repeat scroll 0 0 green;
+#drop-down-header li {
     color: white;
-    padding: 8px;
     text-align: center;
 }
-.drop-down-elements-list li a{
-    text-decoration: none;
+.nav-pills >li >a, .nav-pills >li >a:hover, .nav-pills >li >a:focus {
+    text-decoration: none !important;
+    padding: 10px;
+}
+.nav-pills >li >a:hover, .nav-pills >li >a:focus{
+    margin-bottom: 1px;
+}
+.dropdown-menu{
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+}
+#drop-down-header .nav-pills .dropdown-menu{
+    background: rgba(0, 0, 0, 0.45);
+}
+#drop-down-header .nav-pills .dropdown-menu li:hover a, #drop-down-header .nav-pills .dropdown-menu li:hover{
+    background: rgba(0, 0, 0, 0.45);
+}
+#drop-down-header .nav-pills .dropdown-menu li a{
     color: #ffffff;
+    background-color: transparent !important;
+    background: none;
 }
 
+/*
+ * Header Css for Home
+ */
+.home-header #drop-down-header{
+    margin-top: 50px !important;
+}
+.home-header #drop-down-header .nav-pills{
+    right: 400px;
+}
+.home-header #header-div{
+    height: 25px;
+}
+.home-header #drop-down-header ul{
+    margin-right: 210px;
+}
+
+.home-header #header-div >a{
+    padding: 0px 15px 0 0 ;
+}

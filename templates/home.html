@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     {% load staticfiles %}
     <script src="{% static 'js/home.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <script src="{% static 'js/slideshow.js' %}"></script>
     <title>Home</title>
 
 </head>
 <body>
-{% include "../templates/header.html" %}
+
 <div id="home">
+    <div class="home-header">
+        {% include "../templates/header.html" %}
+    </div>
+
     <div id="home-carousel" class="carousel slide" data-interval="3000" data-ride="carousel">
     	<!-- Carousel indicators -->
         <ol class="carousel-indicators">
@@ -60,16 +65,8 @@
            ashrams
        </div>
     </h2>
-    <div id="home-recent">
-        <div id="recent-requirements">
-            <h3>Recent Requirements</h3>
-            <ul>
-                {% for item in item_list %}
-                    <li>{{ item.name }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div id="what-we-do">
+    <div id="home-recent" class="row">
+        <div id="what-we-do" class="col-md-push-3 col-md-6">
             <h2>
                 What we do...
             </h2>
@@ -78,7 +75,16 @@
                 edslndlf lksdf lksdjfls lkjsdjfljdslkfj lksdjfjsldf lkjsdjfl lkjdsfl jsdlksdljlsd lksdjfljlsd fjlksd dslkkjfs jlsdf lsdjf sdlkjsdf lksdjf sdlkjfsdhjfower ewrfonls oiwf jweof howjhnsde ewhowe hjfowuwef iuwehjf wehfowenf 8wef fhow fhowefnsd ouifjhwsf fhowf ewio
             </div>
         </div>
-    <div id="recent-donations">
+        <div id="recent-requirements" class="col-md-pull-6 col-md-3 col-sm-4">
+            <h3>Recent Requirements</h3>
+            <ul>
+                {% for item in item_list %}
+                    <li>{{ item.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    <div id="recent-donations" class="col-md-push-3 col-md-3 col-sm-4 col-sm-offset-1">
             <h3>Recent Donations</h3>
             <ul>
                 {% for item in item_list %}
@@ -87,7 +93,7 @@
             </ul>
         </div>
     </div>
-    <section id="home-circle-buttons">
+    {% comment %}<section id="home-circle-buttons">
         <div class="circle-button">
                 {% load staticfiles %}
                 <img src="{% static 'images/ashrams.png' %}">
@@ -100,7 +106,7 @@
                 {% load staticfiles %}
                 <img src="{% static 'images/need.png' %}">
         </div>
-    </section>
+    </section>{% endcomment %}
 </div>
 </body>
 

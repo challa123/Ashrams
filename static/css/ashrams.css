@@ -1,0 +1,37 @@
+.data-container ol li{
+    width: 100%;
+    overflow: hidden;
+    margin: 5px;
+    height: auto;
+    float: left;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 10px;
+}
+.data-container ol li img{
+    width: 200px;
+    height: 200px;
+}
+.data-container ol li >div{
+    float: left;
+    display: inline-block;
+}
+.data-container ol li div{
+    word-wrap: break-word;
+}
+.data-container h3{
+    color: orange;
+    width: 100%;
+    text-align: left;
+}
+.ashram-strength{
+    font-style: italic;
+}
+.ashram-contact-info{
+    float: right;
+}
+.ashram-details >div{
+    margin: 0px 10px 0px 50px;
+}
+.ashram-detail .ashram-info{
+    text-indent: 50px;
+}

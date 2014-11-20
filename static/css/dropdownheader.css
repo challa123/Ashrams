@@ -3,25 +3,59 @@
  */
 
 #drop-down-header{
-    width: 100%;
     height: 40px;
-    margin-top: -8px;
+    margin-top: 17px;
     color: #ffffff;
     position: fixed;
     font-size: 14px;
     right: 0px;
     left: 0px;
+    z-index: 1000;
+    list-style: none;
+    padding-left: 0px;
 }
 #drop-down-header .header-drop-element{
     float: right;
     height: 50%;
-    background: #000000;
-    margin: 7px 9px 0 0;
-    padding: 6px 29px;
+    margin-top: 7px;
+    margin-right: 9px;
+    padding: 6px 14px;
+    text-align: center;
 }
-#drop-down-header .header-drop-element:hover{
+#drop-down-header .header-drop-element:hover,
+.header-drop-element ul li:hover{
    cursor: pointer;
    text-shadow: none;
    background: green;
 
+}
+#drop-down-header #contact-id{
+    margin-right:21%;
+}
+#drop-down-header li{
+    margin-bottom: 2px solid grey;
+}
+/**
+ * Drop down elements css
+ **/
+.header-drop-element ul{
+    display: none;
+}
+.header-drop-element:hover ul  {
+    display: block; /* display the dropdown */
+}
+.drop-down-elements-list{
+    padding: 10px 0px 0px 0px;
+    list-style: none;
+   /* position: absolute;*/
+}
+.drop-down-elements-list li {
+    background: none repeat scroll 0 0 green;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+.drop-down-elements-list li a{
+    text-decoration: none;
+    color: #ffffff;
 }

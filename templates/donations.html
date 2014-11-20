@@ -5,147 +5,27 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/donations.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
     <title>Donations</title>
 </head>
 <body>
 <div>
     {% include "../templates/header.html" %}
-    <div class="donations-container">
-        <div>
+    <div class="data-container">
+        <div class="data-div">
             <h2>Donations List</h2>
-        </div>
-
         <ol>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <a href="#">
-                       Clothes Donated by Babai to kaka ashram lothes Donated by Babai to kaka ashram
-                </a>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <a href="#">
-                       Clothes Donated by Babai to kaka ashram
-                </a>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <a>
-                       Clothes Donated by Babai to kaka ashram
-                </a>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <a>
-                       Clothes Donated by Babai to kaka ashram
-                </a>
-            </li><li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <a>
-                       Clothes Donated by Babai to kaka ashram
-                </a>
-            </li><li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li><li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-            <li>
-                {% load staticfiles %}
-                <img src="{% static 'images/example-slide-1.jpg' %}">
-                <div>
-                       Clothes Donated by Babai to kaka ashram
-                </div>
-            </li>
-
-
-
-
-
-        </ol>
-        {% comment %}<ol>
-            {% for item in item_list %}
+            {% for item in donated_items %}
                <li>
-                    <img src="{{ item.img }}">
+                    <img src="http://localhost:8000/media/{{ item.imageByAshram }}">
                    <a href="#">
-                       {{ item.name }} Donated by {{ item.donor_name }} to {{ item.ashram_name }}
-                   </div>
+                       {{ item.name }} Donated by {{ item.userId }} to {{ item.ashramId }}
+                   </a>
                </li>
             {% endfor %}
-        </ol>{% endcomment %}
+        </ol>
+        </div>
     </div>
-
-
 </div>
-
 </body>
-
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    {% load staticfiles %}
+    <script src="{% static 'js/ashrams.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ashrams.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <meta charset="UTF-8">
+    <title>Ashrams</title>
+</head>
+<body>
+    {% include "../templates/header.html" %}
+    <div class="data-container">
+
+        <div class="data-div">
+            <h2>Ashrams List</h2>
+            <ol>
+            {% for item in ashram_items %}
+               <li>
+                    <h3>{{ item.name }}</h3>
+                   <div class="col-md-3 col-sm-2">
+                        <img src="http://localhost:8000/media/{{ item.ashramPic }}">
+                   </div>
+                   <div class="ashram-details col-md-9 col-sm-10">
+
+                       <div class="ashram-info">
+                           {{ item.info }}
+                       </div>
+                       <div class="ashram-strength">
+                           Currently ashram is supporting {{ item.strength }} members
+                       </div>
+                       <div class="ashram-contact-info">
+                           <div class="ashram-address">
+                               <h4>address</h4>
+                               <div>
+                                   {{ item.address }}
+                               </div>
+                               <h4>phone</h4>
+                               {% comment %}<div>Manager - {{ item.manager }}</div>{% endcomment %}
+                               <div>Ph no.-{{ item.phone }}</div>
+                           </div>
+                       </div>
+                   </div>
+               </li>
+            {% endfor %}
+        </ol>
+        </div>
+    </div>
+</body>
+</html>

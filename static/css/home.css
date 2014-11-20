@@ -44,21 +44,26 @@
 
 /* css for reecent changes div */
 #home-recent >div {
-    float : left;
-    margin: 0px 100px;
-    border: 2px solid gray;
-    border-radius: 10px;
-    padding: 5px;
+    float: left;
+    margin: 0px 5px;
 }
 #home-recent{
-    display: flex;
+    display: inline;
+    margin-top: 10px;
 }
-
+#home-recent h3{
+    background: none repeat scroll 0 0 #D6D4D3;
+    border-radius: 8px;
+    /*margin-top: 0;
+    padding: 2px 10px;*/
+}
+#home-recent ul{
+    background: #DFE0DE;
+}
 #what-we-do{
-    margin: 0px 50px;
+    margin: 0px 10px;
     overflow: visible;
     text-align: center;
-    width: 500px;
     word-wrap: break-word;
 }
 /*circular images styles*/

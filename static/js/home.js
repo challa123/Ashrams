@@ -2,36 +2,11 @@
  * jQuery for home.html
  */
 $(document).ready(function() {
-    document.getElementById("hide-all").style.display = "none";
-    imgSlide();
 });
 $(window).load(function(){
     childCountAnimate(100);
     ashramCountAnimate(10);
 });
-function imgSlide(){
-     $('#slides').slidesjs({
-            play: {
-                effect: "fade",
-                active: true,
-                auto: true,
-                interval: 4000,
-                swap: true
-            },
-            navigation: {
-                effect: "fade"
-            },
-            pagination: {
-                effect: "fade"
-            },
-            effect: {
-                fade: {
-                    speed: 400
-                }
-            }
-
-        });
-}
 function childCountAnimate(count) {
      $('#children-count')
             .prop('number', 000)
