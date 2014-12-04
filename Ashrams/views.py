@@ -94,3 +94,6 @@ req_item = [
 
 def sample_html(request):
     return render_to_response('home.html', {"item_list":req_item})
+
+def donations_html(request):
+    return render_to_response('donations.html')
