@@ -45,20 +45,23 @@
 /* css for reecent changes div */
 #home-recent >div {
     float: left;
-    margin: 0px 5px;
+    margin: 0px;
+    padding: 0px;
 }
-#home-recent{
-    display: inline;
-    margin-top: 10px;
-}
+/*#home-recent{*/
+    /*display: inline;*/
+    /*margin-top: 10px;*/
+/*}*/
 #home-recent h3{
     background: none repeat scroll 0 0 #D6D4D3;
     border-radius: 8px;
-    /*margin-top: 0;
-    padding: 2px 10px;*/
+    text-align: center;
 }
-#home-recent ul{
-    background: #DFE0DE;
+/*#home-recent ul{*/
+    /*background: #DFE0DE;*/
+/*}*/
+#recent-requirements li{
+    float: left;
 }
 #what-we-do{
     margin: 0px 10px;
@@ -66,6 +69,16 @@
     text-align: center;
     word-wrap: break-word;
 }
+
+.required-list >li{
+    float: left;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+.ashram-in-req{
+    float: right;
+}
+
 /*circular images styles*/
 #home-circle-buttons >div{
     border-radius: 100%;

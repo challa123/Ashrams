@@ -66,7 +66,7 @@
        </div>
     </h2>
     <div id="home-recent" class="row">
-        <div id="what-we-do" class="col-md-push-3 col-md-6">
+        <div id="what-we-do" class="col-md-6 col-md-push-3">
             <h2>
                 What we do...
             </h2>
@@ -75,22 +75,25 @@
                 edslndlf lksdf lksdjfls lkjsdjfljdslkfj lksdjfjsldf lkjsdjfl lkjdsfl jsdlksdljlsd lksdjfljlsd fjlksd dslkkjfs jlsdf lsdjf sdlkjsdf lksdjf sdlkjfsdhjfower ewrfonls oiwf jweof howjhnsde ewhowe hjfowuwef iuwehjf wehfowenf 8wef fhow fhowefnsd ouifjhwsf fhowf ewio
             </div>
         </div>
-        <div id="recent-requirements" class="col-md-pull-6 col-md-3 col-sm-4">
+        <div id="recent-requirements" class="col-md-2 col-md-pull-5 col-sm-4">
             <h3>Recent Requirements</h3>
-            <ul>
+            <ul class="required-list">
                 {% for item in item_list %}
-                    <li>{{ item.name }}</li>
+
+                    <li><div class="item-in-req">{{item.quantity}} {{ item.name }} needed </div>
+                        <div class="ashram-in-req">at {{ item.ashramId }}</div></li>
+
                 {% endfor %}
             </ul>
         </div>
 
-    <div id="recent-donations" class="col-md-push-3 col-md-3 col-sm-4 col-sm-offset-1">
+    <div id="recent-donations" class="col-md-2 col-md-push-1 col-sm-4 col-sm-offset-1">
             <h3>Recent Donations</h3>
-            <ul>
+            <div>
                 {% for item in item_list %}
-                    <li>{{ item.name }}</li>
+                    <div>{{ item.name }}</div>
                 {% endfor %}
-            </ul>
+            </div>
         </div>
     </div>
     {% comment %}<section id="home-circle-buttons">
